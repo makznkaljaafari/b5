@@ -1,0 +1,24 @@
+{
+  "name": "alshwaia-smart-system",
+  "version": "3.1.0",
+  "private": true,
+  "description": "نظام المحاسبة الذكي لوكالات القات - نسخة النشر المستقرة",
+  "dependencies": {
+    "react": "^19.0.0",
+    "react-dom": "^19.0.0",
+    "@google/genai": "^1.0.0",
+    "@supabase/supabase-js": "^2.45.0",
+    "recharts": "^2.15.0",
+    "zod": "^3.23.0"
+  },
+  "devDependencies": {
+    "vite": "^5.0.0",
+    "@vitejs/plugin-react": "^4.0.0",
+    "typescript": "^5.0.0"
+  },
+  "scripts": {
+    "dev": "vite",
+    "build": "tsc --noEmit && vite build",
+    "preview": "vite preview"
+  }
+}

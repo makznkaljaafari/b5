@@ -1,0 +1,33 @@
+{
+  "compilerOptions": {
+    "target": "ESNext",
+    "useDefineForClassFields": true,
+    "lib": ["DOM", "DOM.Iterable", "ESNext"],
+    "allowJs": false,
+    "skipLibCheck": true,
+    "esModuleInterop": true,
+    "allowSyntheticDefaultImports": true,
+    "strict": true,
+    "forceConsistentCasingInFileNames": true,
+    "module": "ESNext",
+    "moduleResolution": "Bundler",
+    "resolveJsonModule": true,
+    "isolatedModules": true,
+    "noEmit": true, // Vite handles the actual JavaScript output, tsc is used for type checking
+    "jsx": "react-jsx",
+    "rootDir": ".",
+    "baseUrl": "."
+  },
+  "include": [
+    "index.tsx",
+    "App.tsx",
+    "components/**/*.tsx",
+    "context/**/*.tsx",
+    "hooks/**/*.ts",
+    "services/**/*.ts",
+    "schemas.ts",
+    "types.ts",
+    "vite.config.ts"
+  ],
+  "exclude": ["node_modules", "dist"]
+}

@@ -1,0 +1,29 @@
+{
+  "name": "وكالة الشويع للقات - النظام الذكي",
+  "short_name": "الشويع",
+  "description": "نظام محاسبي سحابي متكامل مدعوم بالذكاء الاصطناعي لإدارة مبيعات ومخزون القات.",
+  "lang": "ar-YE",
+  "dir": "rtl",
+  "start_url": "/",
+  "display": "standalone",
+  "background_color": "#f8fafc",
+  "theme_color": "#6366f1",
+  "icons": [
+    {
+      "src": "https://cdn-icons-png.flaticon.com/512/628/628283.png",
+      "sizes": "192x192",
+      "type": "image/png",
+      "purpose": "any maskable"
+    },
+    {
+      "src": "https://cdn-icons-png.flaticon.com/512/628/628283.png",
+      "sizes": "512x512",
+      "type": "image/png",
+      "purpose": "any"
+    }
+  ],
+  "requestFramePermissions": [
+    "camera",
+    "microphone"
+  ]
+}

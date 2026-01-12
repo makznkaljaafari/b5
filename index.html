@@ -1,0 +1,141 @@
+
+<!DOCTYPE html>
+<html lang="ar" dir="rtl" class="light">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no, viewport-fit=cover">
+    
+    <!-- SEO & Metadata -->
+    <title>وكالة الشويع للقات - النظام الذكي</title>
+    <meta name="description" content="نظام الشويع الذكي - الإدارة المحاسبية السحابية المتكاملة لوكالات القات مدعوم بالذكاء الاصطناعي">
+    <meta name="keywords" content="محاسبة، قات، قات، اليمن، نظام سحابي، ذكاء اصطناعي، تجارة">
+    <meta name="author" content="وكالة الشويع">
+    
+    <!-- Social Media Sharing (Open Graph) -->
+    <meta property="og:title" content="نظام الشويع المحاسبي الذكي">
+    <meta property="og:description" content="أول نظام يمني ذكي لإدارة مبيعات ومشتريات القات سحابياً مع دعم كامل للأوامر الصوتية.">
+    <meta property="og:image" content="https://cdn-icons-png.flaticon.com/512/628/628283.png">
+    <meta property="og:url" content="https://alshwaia.vercel.app">
+    <meta property="og:type" content="website">
+    
+    <!-- Twitter Cards -->
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:title" content="وكالة الشويع للقات - النظام الذكي">
+    <meta name="twitter:description" content="إدارة مبيعاتك ومخزونك بذكاء من أي مكان وفي أي وقت.">
+    <meta name="twitter:image" content="https://cdn-icons-png.flaticon.com/512/628/628283.png">
+
+    <!-- Mobile App Settings -->
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
+    <meta name="apple-mobile-web-app-title" content="الشويع">
+    <meta name="mobile-web-app-capable" content="yes">
+    <meta name="theme-color" content="#f8fafc">
+    <meta name="format-detection" content="telephone=no">
+    
+    <link rel="manifest" href="/metadata.json">
+    <link rel="apple-touch-icon" href="https://cdn-icons-png.flaticon.com/512/628/628283.png">
+    <link rel="icon" type="image/png" href="https://cdn-icons-png.flaticon.com/512/628/628283.png">
+    
+    <!-- Preconnect to improve loading speed for critical resources -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link rel="preconnect" href="https://esm.sh">
+    <link rel="dns-prefetch" href="https://esm.sh">
+    <link rel="preconnect" href="https://xaolczjmsrksqqihnlus.supabase.co">
+    <link rel="dns-prefetch" href="https://xaolczjmsrksqqihnlus.supabase.co">
+
+    <link href="https://fonts.googleapis.com/css2?family=Tajawal:wght@400;500;700;900&display=swap" rel="stylesheet">
+    
+    <script src="https://cdn.tailwindcss.com"></script>
+    <style>
+      :root {
+        --color-background-page: #f1f5f9;
+        --color-background-card: #ffffff;
+        --color-background-input: #f8fafc;
+        --color-background-tertiary: #e2e8f0;
+        --color-border-default: #cbd5e1;
+        --color-text-default: #0f172a;
+        --color-accent-sky: #0ea5e9;
+      }
+
+      .dark {
+        --color-background-page: #020617;
+        --color-background-card: #0f172a;
+        --color-background-input: #1e293b;
+        --color-background-tertiary: #1e293b;
+        --color-border-default: #334155;
+        --color-text-default: #f8fafc;
+      }
+
+      * { 
+        font-family: 'Tajawal', sans-serif; 
+        -webkit-tap-highlight-color: transparent;
+        user-select: none;
+      }
+      
+      input, textarea { user-select: auto !important; }
+
+      body { 
+        overscroll-behavior: none; 
+        background-color: var(--color-background-page);
+        color: var(--color-text-default);
+        position: fixed; 
+        height: 100%; 
+        width: 100vw; 
+        overflow: hidden; 
+      }
+
+      #root { 
+        height: 100%; 
+        overflow-y: auto; 
+        -webkit-overflow-scrolling: touch; 
+      }
+      
+      .no-scrollbar::-webkit-scrollbar { display: none; }
+
+      #html-loading-spinner {
+        position: fixed; inset: 0;
+        background-color: #f8fafc;
+        display: flex; flex-direction: column; align-items: center; justify-content: center;
+        z-index: 9999; color: #0f172a;
+      }
+      .dark #html-loading-spinner { background-color: #020617; color: #f8fafc; }
+
+      .spinner {
+        width: 2.5rem; height: 2.5rem;
+        border: 4px solid #6366f1;
+        border-top-color: transparent;
+        border-radius: 50%;
+        animation: spin 0.8s linear infinite;
+        margin-bottom: 1rem;
+      }
+      @keyframes spin { to { transform: rotate(360deg); } }
+    </style>
+
+<script type="importmap">
+{
+  "imports": {
+    "recharts": "https://esm.sh/recharts@^3.6.0",
+    "vite": "https://esm.sh/vite@^7.3.1",
+    "@vitejs/plugin-react": "https://esm.sh/@vitejs/plugin-react@^5.1.2",
+    "react-dom/": "https://esm.sh/react-dom@^19.2.3/",
+    "@google/genai": "https://esm.sh/@google/genai@^1.35.0",
+    "react/": "https://esm.sh/react@^19.2.3/",
+    "react": "https://esm.sh/react@^19.2.3",
+    "@supabase/supabase-js": "https://esm.sh/@supabase/supabase-js@^2.90.1",
+    "zod": "https://esm.sh/zod@^4.3.5"
+  }
+}
+</script>
+</head>
+<body class="antialiased">
+    <div id="root"></div>
+
+    <div id="html-loading-spinner">
+      <div class="spinner"></div>
+      <div class="font-bold">نظام الشويع الذكي</div>
+      <small style="margin-top: 8px; opacity: 0.6;">جاري التحميل...</small>
+    </div>
+    <script type="module" src="/index.tsx"></script>
+</body>
+</html>
